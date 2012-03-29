@@ -1,0 +1,19 @@
+TODO: practice on Windows laptop
+
+- Download Windows zip package
+- unzip and chmod
+- Plain DR usage:
+  - drrun ls
+  - drrun calc
+  - drrun -debug -loglevel 3 ls 
+  - search "interp: start" to see app code
+  - speed run: drrun bzip2 ls.exe log (~3 MB)
+  - if time, compress thread log (~27 MB)
+- Developing a client:
+  - open CMakeLists.txt
+  - open bbcount.c in Vim
+    - dr_init entry point, registers events, can't use libc (much)
+    - event_basic_block, instrumentation vs. execution
+    - event_exit, use results
+  - open tracecount.c in Vim
+    - ditto
